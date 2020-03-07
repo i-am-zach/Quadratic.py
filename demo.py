@@ -1,7 +1,9 @@
 from polynomial import Quadratic
 
-linear = Quadratic(0, 1, -5)
-print(linear.factor_str())
+a = int(input('Enter squared coefficient: '))
+b = int(input('Enter linear coefficient: '))
+c = int(input('Enter constant coefficient: '))
 
-quad = Quadratic(1, 3, 2)
+quad = Quadratic(a, b, c)
+print(quad)
 print(quad.factor_str())

@@ -139,7 +139,7 @@ class LinearPair:
                 return f"({self.a})"
             if self.a.a * self.b.a != self.coeff:
                 temp_coeff = self.coeff // (self.a.a * self.b.a)
-                return f"{temp_coeff}({self.a})({self.b})"
+                return f"{int(temp_coeff)}({self.a})({self.b})"
             return f"({self.a})({self.b})"
 
         def factors(self):
