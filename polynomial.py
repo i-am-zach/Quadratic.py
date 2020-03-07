@@ -120,7 +120,8 @@ class Linear:
 
 class LinearPair:
         def __init__(self, a, b, coeff=1):
-            assert(isinstance(coeff, int))
+            assert(isinstance(a, Linear))
+            assert(isinstance(b, Linear))
             self.a = a
             self.b = b
             self.coeff = int(coeff)
