@@ -41,6 +41,12 @@ class Quadratic:
         Factors the quadratic into a linear pair
         @return: type<LinearPair>
         """
+        if self.a == 0:
+            if self.b:
+                solution = -self.c / self.b
+            else:
+                solution = self.c
+            return LinearPair(Linear(1, -solution), Linear(0, 1), coeff=1)
         r1, r2 = quadratic_formula(self.a, self.b, self.c)
         if r1 and r2:
             l1, l2 = Linear(1, r1), Linear(1, r2)
@@ -127,6 +133,10 @@ class LinearPair:
             self.coeff = int(coeff)
 
         def __str__(self):
+            if self.a.a == 0:
+                return f"({self.b})"
+            if self.b.a == 0:
+                return f"({self.a})"
             if self.a.a * self.b.a != self.coeff:
                 temp_coeff = self.coeff // (self.a.a * self.b.a)
                 return f"{temp_coeff}({self.a})({self.b})"
