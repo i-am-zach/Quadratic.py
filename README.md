@@ -14,7 +14,7 @@ factor | Returns a LinearPair object. The LinearPair object consists of two line
 factor_str | String version of factor() method
 
 ### Class: Linear
-#### Represents a linear equation in the for of ax + b
+#### Represents a linear equation in the form of ax + b
 attributes | description
 -----------| -----------
 a | The coefficient of the linear term
